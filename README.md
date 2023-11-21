@@ -3,7 +3,7 @@ About Me:
 I am deeply involved in the cybersecurity landscape, serving as a Cybersecurity Digital Forensics student, an IT technician, and a cybersecurity researcher. My journey includes volunteering at prominent hacker conferences, leading a college cybersecurity club focused on student research, and actively contributing to the cybersecurity community.
 The Name "Dread Pirate Roberts":
 The name "Dread Pirate Roberts" represents the ethos of learning, sharing, and community within cybersecurity. It symbolizes the collective knowledge and guidance I've received, inspiring me to share and contribute back to this thriving field.
-..................................
+
 Embracing the Legacy of "Dread Pirate Roberts"
 ======================================================================================================================================================================================================================
 The narrative of "Dread Pirate Roberts" echoes the journey of a sailor thrust into uncharted waters. Beyond a mere name, it embodies a figure transitioning from captive to captain—a transformation navigating the depths of an enigmatic voyage.
