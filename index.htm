@@ -86,5 +86,58 @@ pre {
 <script src="termynal.js" data-termynal-container="#termynal">
 var termynal = new Termynal('#termynal', { startDelay: 600 })
 </script>
+ <script>
+        'use strict';
+
+        class Termynal {
+            constructor(container = '#termynal', options = {}) {
+                this.container = (typeof container === 'string') ? document.querySelector(container) : container;
+                this.pfx = `data-${options.prefix || 'ty'}`;
+                // ... (rest of your Termynal class code)
+
+                this.initInputListener();
+                if (!options.noInit) this.init();
+            }
+
+            initInputListener() {
+                const userInput = document.getElementById('userInput');
+                userInput.addEventListener('keydown', async (event) => {
+                    if (event.key === 'Enter') {
+                        const command = userInput.value.trim();
+                        await this.handleCommand(command);
+                        userInput.value = ''; // Clear the input field after processing
+                    }
+                });
+            }
+
+            async handleCommand(command) {
+                switch (command) {
+                    case 'home':
+                        window.location.href = '/'; // Redirect to your home page
+                        break;
+                    case 'about':
+                        window.location.href = '/about'; // Redirect to your 'about' page
+                        break;
+                    // Add more cases for other commands and their corresponding page URLs
+                    default:
+                        this.displayOutput('Unknown command. Type ?help for available commands.');
+                        break;
+                }
+            }
+
+            displayOutput(output) {
+                const outputElement = document.createElement('span');
+                outputElement.textContent = output;
+                this.container.appendChild(outputElement);
+            }
+
+            // ... (rest of your Termynal class code)
+        }
+
+        if (document.currentScript.hasAttribute('data-termynal-container')) {
+            const containers = document.currentScript.getAttribute('data-termynal-container');
+            containers.split('|').forEach(container => new Termynal(container));
+        }
+    </script>
 </body>
 </html>
